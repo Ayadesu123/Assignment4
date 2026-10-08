@@ -18,8 +18,8 @@ file can also be selected in the sidebar.
 - Descriptive statistics: N, missing values, minimum, maximum, mean, standard deviation,
   median, skewness, and excess kurtosis
 - Histograms and box plots
-- Cronbach's alpha for the ten perceived-stress items, including the codebook's reverse
-  scoring for `pss4`, `pss5`, `pss7`, and `pss8`
+- Selectable Cronbach's alpha reliability tests for all questionnaire scales and optional
+  item subsets, including each scale's codebook reverse-scoring rules
 - Pearson correlation coefficients and two-sided p-values
 - Multiple linear regression with selectable dependent and independent variables
 - Regression coefficients, p-values, confidence intervals, R-squared, adjusted R-squared,

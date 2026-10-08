@@ -130,25 +130,43 @@ with tabs[1]:
         st.info("Select at least one numeric variable.")
 
 with tabs[2]:
-    st.subheader("Reliability test — Total perceived stress")
-    stress_items = SCALE_DEFINITIONS["Tpstress"]["items"]
-    if set(stress_items).issubset(data.columns):
-        alpha, scored = cronbach_alpha(data, stress_items, SCALE_DEFINITIONS["Tpstress"]["reverse"])
+    st.subheader("Reliability test — Cronbach's alpha")
+    scale_name = st.selectbox(
+        "Choose the questionnaire scale to assess",
+        list(SCALE_DEFINITIONS),
+        index=list(SCALE_DEFINITIONS).index("Tpstress"),
+        format_func=lambda name: f"{SCALE_DEFINITIONS[name]['label']} ({name})",
+    )
+    definition = SCALE_DEFINITIONS[scale_name]
+    available_items = [item for item in definition["items"] if item in data.columns]
+    selected_items = st.multiselect(
+        "Items included in the reliability test",
+        available_items,
+        default=available_items,
+        format_func=label,
+    )
+    if len(selected_items) >= 2:
+        reverse_items = [item for item in definition["reverse"] if item in selected_items]
+        alpha, scored = cronbach_alpha(data, selected_items, reverse_items)
         st.metric("Cronbach's alpha", "Not available" if pd.isna(alpha) else f"{alpha:.3f}")
         st.write(
-            "Cronbach's alpha estimates internal consistency across the ten perceived-stress items. "
-            "The calculation uses reverse-scored items pss4, pss5, pss7, and pss8 and complete cases."
+            f"Cronbach's alpha estimates internal consistency across the selected items in "
+            f"the {definition['label']} scale. "
+            f"Reverse-scored items from the codebook are applied automatically: "
+            f"{', '.join(reverse_items) if reverse_items else 'none'}."
         )
         item_table = pd.DataFrame(
             {
-                "Item": stress_items,
-                "Reverse scored": ["Yes" if item in SCALE_DEFINITIONS["Tpstress"]["reverse"] else "No" for item in stress_items],
-                "Mean after scoring": [scored[item].mean() for item in stress_items],
-                "Std. deviation": [scored[item].std() for item in stress_items],
+                "Item": selected_items,
+                "Reverse scored": ["Yes" if item in reverse_items else "No" for item in selected_items],
+                "Mean after scoring": [scored[item].mean() for item in selected_items],
+                "Std. deviation": [scored[item].std() for item in selected_items],
             }
         )
         st.dataframe(item_table, use_container_width=True, hide_index=True)
-        download_csv(item_table, "perceived_stress_reliability_items.csv", "Download reliability item table")
+        download_csv(item_table, f"{scale_name.lower()}_reliability_items.csv", "Download reliability item table")
+    else:
+        st.info("Select at least two items to calculate Cronbach's alpha.")
 
 with tabs[3]:
     st.subheader("Part B — Pearson correlations")
