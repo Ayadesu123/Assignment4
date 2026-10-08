@@ -1,0 +1,73 @@
+reparation (general)
+
+1) Download the SPSS data file  ME2004_Survey.sav Download Download the SPSS data file  ME2004_Survey.sav , ME2004_Questionnaire.pdfDownload ME2004_Questionnaire.pdf , and ME2004_Codebook.pdfDownload ME2004_Codebook.pdf. Familiarize yourselves with the data file and documents.
+
+2) Answer the questionnaire yourself and store your answers in an excel file. When you answer the questions, you do not need to reflect on your individual situation (i.e., you can answer as an imaginary person). This task is simply done in order for you to familiarize yourself with the questionnaire.
+
+3) Add all group members’ answers to sav. This means that each group will have a final sample size of 439 plus the number of group members in your group.
+
+Tasks
+
+Part A
+
+Conduct an exploratory data analysis of the data, see chapter 12 in Saunders et al. (2015, 2012). Describe the key aspects of the data (e.g., minimum, maximum, mean, std. dev., skewness, kurtosis, histograms, and box plots), and motivate your choice of variables (e.g., with a research question or objective). Remember to include general definitions of the type of descriptive statistics you use to show basic understanding (e.g., a skewness of 0 means that the data set is perfectly symmetrical). Finally, do a reliability test of the questions that make up the variable total perceived stress (tpstress). Interpret the results.
+
+Part B
+
+Use the variables from part A and assess the strength of correlations between these variables. Discuss what the different strengths of correlations between variables imply. Remember to include general definitions to show basic understanding (e.g. a value of -1 represents a perfect negative correlation, i.e. as the values of one variable increase those of the other decrease).
+
+Part C
+
+Use multiple regression analysis to predict the total perceived stress (tpstress). You may choose some or all of your variables from part A. Motivate why the variables are chosen and why they are suitable for inclusion. Reflect on statistical significance and discuss limitations of your multiple regression analysis.
+
+Report
+
+You submit one report per group. The report should present the results of all parts of the given tasks and include a paragraph on how each group member contributed to the different tasks and to the report.
+
+    The suggestion is to use 1,500 words for this assignment, excluding the paragraph on individual contributions.
+    Tables and figures are recommended for presentation of results.
+    Good use of references to course literature is commended.
+
+Seminar
+
+A draft should be made before your group´s seminar. In the draft you are expected to perform the given assignment to the best level possible. From experience gathered through previous course rounds, students who work more on the draft are more likely to pass the final submission.
+
+In order to participate actively in the seminar you need to be well acquainted with the draft to represent the group in cross-group presentations and to be able to provide feedback on others’ works. Furthermore, you need to conduct preparatory reading of the course literature as you will share your reflections with other students during the seminar.
+
+Since the final submission is an improvement of the draft with help from feedback during the seminars, it makes sense to take notes of what is said during the seminar. In line with the idea of a community of inquiry, your most valuable feedback will appear in cross-group discussions with your peers. 
+
+Common feedback from previous years
+
+    General
+        Use Saunders et al. (2015, 2012)
+        Read through the entire assignment before you start to reduce the risk of running in the wrong direction
+        Doing the analysis in SPSS is fast and can be done several times before you start writing text and producing figures and tables
+    Research question
+        Motivate and link the research question to the choice of variables in order to justify your variable selection
+        Make the research question precise
+        Let the research question guide your work
+    Exploratory data analysis
+        Use figures and tables that make sense
+        Explain the content of figures and tables in text
+        Cleaning the data is a good idea, but you need to describe what you do in text
+    Correlation analysis
+        Correlation is not the same as causation
+        Correlation is good to discuss both in terms of strength and statistical significance
+        The way to conduct the analysis depends on the data type
+    Multiple linear regression analysis
+        Discuss underlying assumptions such as multicollinearity
+        Motivate why you include a certain number of independent variables
+        Remember limitations
+
+Note
+
+We would like to make a clarification concerning the basic assumptions for multiple linear regression as introduced in Saunders et al. (2015, 2012):
+
+    Assumption 1 – the relationship between dependent and independent variable is linear
+    Assumption 2 – the variance around the regression line is the same for all values of the dependent variable(s), i.e. homoscedasticity
+    Assumption 3 – absence of correlation between two or more independent variables, collinearity or multi-collinearity
+    Assumption 4 – the data for the independent variables and dependent variable are normally distributed.
+
+We have been in contact with Mark Saunders who has confirmed that the fourth assumption is incorrect and that this is changed in the seventh version of the book. The new text reads as follows:
+
+The residuals are normally distributed (discussed earlier in this section and Section 12.4). The residuals are the ‘errors’ between the predicted values of the dependent variable and the observed value when using the resultant regression equation. The simplest diagnostic tools to use here are to either draw a histogram of the residual values and look for a normal distribution (Figure 12.7), and plot the residual (error) values against the predicted values on a scatter graph and look for a diagonal line running from bottom left to top right.
